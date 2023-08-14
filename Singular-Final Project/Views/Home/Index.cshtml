@@ -2,11 +2,29 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4 text-dark">Welcome to the E-Singular store</h1>
-    <p style="font-weight: bold; color: black;">This is a place where the greatest employees shop!</p>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@ViewData["Title"]</title>
+    <style>
+        /* CSS designs */
+        .welcome-text {
+            font-family: 'Rowdies', sans-serif; /* Apply the Rowdies font */
+            font-size: 36px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Rowdies:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4 text-dark welcome-text">Welcome to the E-Singular store</h1>
+        <p style="font-weight: bold; color: black;">This is a place where the greatest employees shop!</p>
+        <!-- Click here to start shopping link -->
+        <a href="http://localhost:5142/products">Click here to start shopping</a>
+    </div>
 
-<div class="text-center">
-    <img src="~/media/products/singular%20picture.jpeg" alt="Bottom Image" class="img-fluid" />
-</div>
+    <div class="text-center">
+        <img src="~/media/products/singular picture.jpeg" alt="Bottom Image" class="img-fluid" style="animation: rotateImage 6s linear infinite;" />
+    </div>
+</body>
+</html>

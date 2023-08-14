@@ -25,7 +25,8 @@ namespace Singular_Final_Project.Controllers
             {
                 ViewBag.TotalPages = (int)Math.Ceiling((decimal)_context.Products.Count() / pageSize);
 
-                return View(await _context.Products.OrderByDescending(p => p.Id).Skip((p - 1) * pageSize).Take(pageSize).ToListAsync());
+                return View(await _context.Products.OrderByDescending(p => p.Id).Skip((p - 1) * pageSize).Take(pageSize)
+                    .ToListAsync());
             }
 
             Category category = await _context.Categories.Where(c => c.Slug == categorySlug).FirstOrDefaultAsync();

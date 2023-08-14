@@ -28,7 +28,7 @@ namespace Singular_Final_Project.Controllers
             return View(cartVM);
         }
 
-        public async Task<IActionResult> Add(long id)
+        public async Task<IActionResult> Add(int id)
         {
             Product product = await _context.Products.FindAsync(id);
 
